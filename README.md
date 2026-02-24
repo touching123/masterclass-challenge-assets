@@ -1,6 +1,6 @@
 # Masterclass Challenge Assets
 
-This repository contains the assets used for a [Killercoda](https://killercoda.com/) challenge, specifically focusing on Kubernetes policy enforcement using [Kyverno](https://kyverno.io/).
+This repository contains the assets used for a [Killercoda](https://killercoda.com/touching/course/scenarios) challenge, specifically focusing on Kubernetes policy enforcement using [Kyverno](https://kyverno.io/).
 
 ## Contents
 
