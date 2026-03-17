@@ -11,11 +11,11 @@ This directory houses `masterclass-policies.yaml`, which contains a set of Kyver
 The following policies are included and enforced:
 
 * **`require-resources`**: Ensures that all Pod containers have CPU and memory `requests` and `limits` defined.
-* **`require-probes`**: Requires all Pod containers to configure both `livenessProbe` and `readinessProbe`.
+* **`require-probes`**: Requires all Pod containers to configure both `livenessProbe` and `readinessProbe`. Supports `httpGet`, `tcpSocket`, and `exec` probe types.
 * **`require-labels`**: Mandates the presence of standard Kubernetes labels (`app.kubernetes.io/name` and `app.kubernetes.io/instance`) on Pods, Deployments, and Services.
 * **`require-non-root`**: Enforces that containers must run as a non-root user by requiring `securityContext.runAsNonRoot: true`.
 * **`require-drop-all`**: Requires containers to drop all Linux capabilities (`securityContext.capabilities.drop: ["ALL"]`) for enhanced security.
-* **`require-non-default-sa`**: Prevents the use of the `default` ServiceAccount, requiring Pods to specify a dedicated `serviceAccountName`.
+* **`require-non-default-sa`**: If `serviceAccountName` is specified, it must not be set to `default`. Pods should use a dedicated ServiceAccount.
 
 ## Usage
 
