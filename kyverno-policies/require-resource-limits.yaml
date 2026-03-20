@@ -13,6 +13,7 @@ spec:
               kinds:
                 - Pod
                 - Deployment
+                - StatefulSet
       validate:
         message: "CPU and memory requests and limits are required."
         pattern:
