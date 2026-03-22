@@ -11,12 +11,11 @@ spec:
         any:
           - resources:
               kinds:
-                - Deployment
                 - Pod
       validate:
         message: "Standard labels app.kubernetes.io/name and app.kubernetes.io/instance are required."
         pattern:
           metadata:
             labels:
-              app.kubernetes.io/name: "?*"
-              app.kubernetes.io/instance: "?*"
+              app.kubernetes.io/name: "gift-tracking-app"
+              app.kubernetes.io/instance: "gift-tracking-app"
